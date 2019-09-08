@@ -15248,7 +15248,630 @@ var _withLatestFrom = require("../internal/operators/withLatestFrom");
 var _zip = require("../internal/operators/zip");
 
 var _zipAll = require("../internal/operators/zipAll");
-},{"../internal/operators/audit":"node_modules/rxjs/_esm5/internal/operators/audit.js","../internal/operators/auditTime":"node_modules/rxjs/_esm5/internal/operators/auditTime.js","../internal/operators/buffer":"node_modules/rxjs/_esm5/internal/operators/buffer.js","../internal/operators/bufferCount":"node_modules/rxjs/_esm5/internal/operators/bufferCount.js","../internal/operators/bufferTime":"node_modules/rxjs/_esm5/internal/operators/bufferTime.js","../internal/operators/bufferToggle":"node_modules/rxjs/_esm5/internal/operators/bufferToggle.js","../internal/operators/bufferWhen":"node_modules/rxjs/_esm5/internal/operators/bufferWhen.js","../internal/operators/catchError":"node_modules/rxjs/_esm5/internal/operators/catchError.js","../internal/operators/combineAll":"node_modules/rxjs/_esm5/internal/operators/combineAll.js","../internal/operators/combineLatest":"node_modules/rxjs/_esm5/internal/operators/combineLatest.js","../internal/operators/concat":"node_modules/rxjs/_esm5/internal/operators/concat.js","../internal/operators/concatAll":"node_modules/rxjs/_esm5/internal/operators/concatAll.js","../internal/operators/concatMap":"node_modules/rxjs/_esm5/internal/operators/concatMap.js","../internal/operators/concatMapTo":"node_modules/rxjs/_esm5/internal/operators/concatMapTo.js","../internal/operators/count":"node_modules/rxjs/_esm5/internal/operators/count.js","../internal/operators/debounce":"node_modules/rxjs/_esm5/internal/operators/debounce.js","../internal/operators/debounceTime":"node_modules/rxjs/_esm5/internal/operators/debounceTime.js","../internal/operators/defaultIfEmpty":"node_modules/rxjs/_esm5/internal/operators/defaultIfEmpty.js","../internal/operators/delay":"node_modules/rxjs/_esm5/internal/operators/delay.js","../internal/operators/delayWhen":"node_modules/rxjs/_esm5/internal/operators/delayWhen.js","../internal/operators/dematerialize":"node_modules/rxjs/_esm5/internal/operators/dematerialize.js","../internal/operators/distinct":"node_modules/rxjs/_esm5/internal/operators/distinct.js","../internal/operators/distinctUntilChanged":"node_modules/rxjs/_esm5/internal/operators/distinctUntilChanged.js","../internal/operators/distinctUntilKeyChanged":"node_modules/rxjs/_esm5/internal/operators/distinctUntilKeyChanged.js","../internal/operators/elementAt":"node_modules/rxjs/_esm5/internal/operators/elementAt.js","../internal/operators/endWith":"node_modules/rxjs/_esm5/internal/operators/endWith.js","../internal/operators/every":"node_modules/rxjs/_esm5/internal/operators/every.js","../internal/operators/exhaust":"node_modules/rxjs/_esm5/internal/operators/exhaust.js","../internal/operators/exhaustMap":"node_modules/rxjs/_esm5/internal/operators/exhaustMap.js","../internal/operators/expand":"node_modules/rxjs/_esm5/internal/operators/expand.js","../internal/operators/filter":"node_modules/rxjs/_esm5/internal/operators/filter.js","../internal/operators/finalize":"node_modules/rxjs/_esm5/internal/operators/finalize.js","../internal/operators/find":"node_modules/rxjs/_esm5/internal/operators/find.js","../internal/operators/findIndex":"node_modules/rxjs/_esm5/internal/operators/findIndex.js","../internal/operators/first":"node_modules/rxjs/_esm5/internal/operators/first.js","../internal/operators/groupBy":"node_modules/rxjs/_esm5/internal/operators/groupBy.js","../internal/operators/ignoreElements":"node_modules/rxjs/_esm5/internal/operators/ignoreElements.js","../internal/operators/isEmpty":"node_modules/rxjs/_esm5/internal/operators/isEmpty.js","../internal/operators/last":"node_modules/rxjs/_esm5/internal/operators/last.js","../internal/operators/map":"node_modules/rxjs/_esm5/internal/operators/map.js","../internal/operators/mapTo":"node_modules/rxjs/_esm5/internal/operators/mapTo.js","../internal/operators/materialize":"node_modules/rxjs/_esm5/internal/operators/materialize.js","../internal/operators/max":"node_modules/rxjs/_esm5/internal/operators/max.js","../internal/operators/merge":"node_modules/rxjs/_esm5/internal/operators/merge.js","../internal/operators/mergeAll":"node_modules/rxjs/_esm5/internal/operators/mergeAll.js","../internal/operators/mergeMap":"node_modules/rxjs/_esm5/internal/operators/mergeMap.js","../internal/operators/mergeMapTo":"node_modules/rxjs/_esm5/internal/operators/mergeMapTo.js","../internal/operators/mergeScan":"node_modules/rxjs/_esm5/internal/operators/mergeScan.js","../internal/operators/min":"node_modules/rxjs/_esm5/internal/operators/min.js","../internal/operators/multicast":"node_modules/rxjs/_esm5/internal/operators/multicast.js","../internal/operators/observeOn":"node_modules/rxjs/_esm5/internal/operators/observeOn.js","../internal/operators/onErrorResumeNext":"node_modules/rxjs/_esm5/internal/operators/onErrorResumeNext.js","../internal/operators/pairwise":"node_modules/rxjs/_esm5/internal/operators/pairwise.js","../internal/operators/partition":"node_modules/rxjs/_esm5/internal/operators/partition.js","../internal/operators/pluck":"node_modules/rxjs/_esm5/internal/operators/pluck.js","../internal/operators/publish":"node_modules/rxjs/_esm5/internal/operators/publish.js","../internal/operators/publishBehavior":"node_modules/rxjs/_esm5/internal/operators/publishBehavior.js","../internal/operators/publishLast":"node_modules/rxjs/_esm5/internal/operators/publishLast.js","../internal/operators/publishReplay":"node_modules/rxjs/_esm5/internal/operators/publishReplay.js","../internal/operators/race":"node_modules/rxjs/_esm5/internal/operators/race.js","../internal/operators/reduce":"node_modules/rxjs/_esm5/internal/operators/reduce.js","../internal/operators/repeat":"node_modules/rxjs/_esm5/internal/operators/repeat.js","../internal/operators/repeatWhen":"node_modules/rxjs/_esm5/internal/operators/repeatWhen.js","../internal/operators/retry":"node_modules/rxjs/_esm5/internal/operators/retry.js","../internal/operators/retryWhen":"node_modules/rxjs/_esm5/internal/operators/retryWhen.js","../internal/operators/refCount":"node_modules/rxjs/_esm5/internal/operators/refCount.js","../internal/operators/sample":"node_modules/rxjs/_esm5/internal/operators/sample.js","../internal/operators/sampleTime":"node_modules/rxjs/_esm5/internal/operators/sampleTime.js","../internal/operators/scan":"node_modules/rxjs/_esm5/internal/operators/scan.js","../internal/operators/sequenceEqual":"node_modules/rxjs/_esm5/internal/operators/sequenceEqual.js","../internal/operators/share":"node_modules/rxjs/_esm5/internal/operators/share.js","../internal/operators/shareReplay":"node_modules/rxjs/_esm5/internal/operators/shareReplay.js","../internal/operators/single":"node_modules/rxjs/_esm5/internal/operators/single.js","../internal/operators/skip":"node_modules/rxjs/_esm5/internal/operators/skip.js","../internal/operators/skipLast":"node_modules/rxjs/_esm5/internal/operators/skipLast.js","../internal/operators/skipUntil":"node_modules/rxjs/_esm5/internal/operators/skipUntil.js","../internal/operators/skipWhile":"node_modules/rxjs/_esm5/internal/operators/skipWhile.js","../internal/operators/startWith":"node_modules/rxjs/_esm5/internal/operators/startWith.js","../internal/operators/subscribeOn":"node_modules/rxjs/_esm5/internal/operators/subscribeOn.js","../internal/operators/switchAll":"node_modules/rxjs/_esm5/internal/operators/switchAll.js","../internal/operators/switchMap":"node_modules/rxjs/_esm5/internal/operators/switchMap.js","../internal/operators/switchMapTo":"node_modules/rxjs/_esm5/internal/operators/switchMapTo.js","../internal/operators/take":"node_modules/rxjs/_esm5/internal/operators/take.js","../internal/operators/takeLast":"node_modules/rxjs/_esm5/internal/operators/takeLast.js","../internal/operators/takeUntil":"node_modules/rxjs/_esm5/internal/operators/takeUntil.js","../internal/operators/takeWhile":"node_modules/rxjs/_esm5/internal/operators/takeWhile.js","../internal/operators/tap":"node_modules/rxjs/_esm5/internal/operators/tap.js","../internal/operators/throttle":"node_modules/rxjs/_esm5/internal/operators/throttle.js","../internal/operators/throttleTime":"node_modules/rxjs/_esm5/internal/operators/throttleTime.js","../internal/operators/throwIfEmpty":"node_modules/rxjs/_esm5/internal/operators/throwIfEmpty.js","../internal/operators/timeInterval":"node_modules/rxjs/_esm5/internal/operators/timeInterval.js","../internal/operators/timeout":"node_modules/rxjs/_esm5/internal/operators/timeout.js","../internal/operators/timeoutWith":"node_modules/rxjs/_esm5/internal/operators/timeoutWith.js","../internal/operators/timestamp":"node_modules/rxjs/_esm5/internal/operators/timestamp.js","../internal/operators/toArray":"node_modules/rxjs/_esm5/internal/operators/toArray.js","../internal/operators/window":"node_modules/rxjs/_esm5/internal/operators/window.js","../internal/operators/windowCount":"node_modules/rxjs/_esm5/internal/operators/windowCount.js","../internal/operators/windowTime":"node_modules/rxjs/_esm5/internal/operators/windowTime.js","../internal/operators/windowToggle":"node_modules/rxjs/_esm5/internal/operators/windowToggle.js","../internal/operators/windowWhen":"node_modules/rxjs/_esm5/internal/operators/windowWhen.js","../internal/operators/withLatestFrom":"node_modules/rxjs/_esm5/internal/operators/withLatestFrom.js","../internal/operators/zip":"node_modules/rxjs/_esm5/internal/operators/zip.js","../internal/operators/zipAll":"node_modules/rxjs/_esm5/internal/operators/zipAll.js"}],"js/createStore.js":[function(require,module,exports) {
+},{"../internal/operators/audit":"node_modules/rxjs/_esm5/internal/operators/audit.js","../internal/operators/auditTime":"node_modules/rxjs/_esm5/internal/operators/auditTime.js","../internal/operators/buffer":"node_modules/rxjs/_esm5/internal/operators/buffer.js","../internal/operators/bufferCount":"node_modules/rxjs/_esm5/internal/operators/bufferCount.js","../internal/operators/bufferTime":"node_modules/rxjs/_esm5/internal/operators/bufferTime.js","../internal/operators/bufferToggle":"node_modules/rxjs/_esm5/internal/operators/bufferToggle.js","../internal/operators/bufferWhen":"node_modules/rxjs/_esm5/internal/operators/bufferWhen.js","../internal/operators/catchError":"node_modules/rxjs/_esm5/internal/operators/catchError.js","../internal/operators/combineAll":"node_modules/rxjs/_esm5/internal/operators/combineAll.js","../internal/operators/combineLatest":"node_modules/rxjs/_esm5/internal/operators/combineLatest.js","../internal/operators/concat":"node_modules/rxjs/_esm5/internal/operators/concat.js","../internal/operators/concatAll":"node_modules/rxjs/_esm5/internal/operators/concatAll.js","../internal/operators/concatMap":"node_modules/rxjs/_esm5/internal/operators/concatMap.js","../internal/operators/concatMapTo":"node_modules/rxjs/_esm5/internal/operators/concatMapTo.js","../internal/operators/count":"node_modules/rxjs/_esm5/internal/operators/count.js","../internal/operators/debounce":"node_modules/rxjs/_esm5/internal/operators/debounce.js","../internal/operators/debounceTime":"node_modules/rxjs/_esm5/internal/operators/debounceTime.js","../internal/operators/defaultIfEmpty":"node_modules/rxjs/_esm5/internal/operators/defaultIfEmpty.js","../internal/operators/delay":"node_modules/rxjs/_esm5/internal/operators/delay.js","../internal/operators/delayWhen":"node_modules/rxjs/_esm5/internal/operators/delayWhen.js","../internal/operators/dematerialize":"node_modules/rxjs/_esm5/internal/operators/dematerialize.js","../internal/operators/distinct":"node_modules/rxjs/_esm5/internal/operators/distinct.js","../internal/operators/distinctUntilChanged":"node_modules/rxjs/_esm5/internal/operators/distinctUntilChanged.js","../internal/operators/distinctUntilKeyChanged":"node_modules/rxjs/_esm5/internal/operators/distinctUntilKeyChanged.js","../internal/operators/elementAt":"node_modules/rxjs/_esm5/internal/operators/elementAt.js","../internal/operators/endWith":"node_modules/rxjs/_esm5/internal/operators/endWith.js","../internal/operators/every":"node_modules/rxjs/_esm5/internal/operators/every.js","../internal/operators/exhaust":"node_modules/rxjs/_esm5/internal/operators/exhaust.js","../internal/operators/exhaustMap":"node_modules/rxjs/_esm5/internal/operators/exhaustMap.js","../internal/operators/expand":"node_modules/rxjs/_esm5/internal/operators/expand.js","../internal/operators/filter":"node_modules/rxjs/_esm5/internal/operators/filter.js","../internal/operators/finalize":"node_modules/rxjs/_esm5/internal/operators/finalize.js","../internal/operators/find":"node_modules/rxjs/_esm5/internal/operators/find.js","../internal/operators/findIndex":"node_modules/rxjs/_esm5/internal/operators/findIndex.js","../internal/operators/first":"node_modules/rxjs/_esm5/internal/operators/first.js","../internal/operators/groupBy":"node_modules/rxjs/_esm5/internal/operators/groupBy.js","../internal/operators/ignoreElements":"node_modules/rxjs/_esm5/internal/operators/ignoreElements.js","../internal/operators/isEmpty":"node_modules/rxjs/_esm5/internal/operators/isEmpty.js","../internal/operators/last":"node_modules/rxjs/_esm5/internal/operators/last.js","../internal/operators/map":"node_modules/rxjs/_esm5/internal/operators/map.js","../internal/operators/mapTo":"node_modules/rxjs/_esm5/internal/operators/mapTo.js","../internal/operators/materialize":"node_modules/rxjs/_esm5/internal/operators/materialize.js","../internal/operators/max":"node_modules/rxjs/_esm5/internal/operators/max.js","../internal/operators/merge":"node_modules/rxjs/_esm5/internal/operators/merge.js","../internal/operators/mergeAll":"node_modules/rxjs/_esm5/internal/operators/mergeAll.js","../internal/operators/mergeMap":"node_modules/rxjs/_esm5/internal/operators/mergeMap.js","../internal/operators/mergeMapTo":"node_modules/rxjs/_esm5/internal/operators/mergeMapTo.js","../internal/operators/mergeScan":"node_modules/rxjs/_esm5/internal/operators/mergeScan.js","../internal/operators/min":"node_modules/rxjs/_esm5/internal/operators/min.js","../internal/operators/multicast":"node_modules/rxjs/_esm5/internal/operators/multicast.js","../internal/operators/observeOn":"node_modules/rxjs/_esm5/internal/operators/observeOn.js","../internal/operators/onErrorResumeNext":"node_modules/rxjs/_esm5/internal/operators/onErrorResumeNext.js","../internal/operators/pairwise":"node_modules/rxjs/_esm5/internal/operators/pairwise.js","../internal/operators/partition":"node_modules/rxjs/_esm5/internal/operators/partition.js","../internal/operators/pluck":"node_modules/rxjs/_esm5/internal/operators/pluck.js","../internal/operators/publish":"node_modules/rxjs/_esm5/internal/operators/publish.js","../internal/operators/publishBehavior":"node_modules/rxjs/_esm5/internal/operators/publishBehavior.js","../internal/operators/publishLast":"node_modules/rxjs/_esm5/internal/operators/publishLast.js","../internal/operators/publishReplay":"node_modules/rxjs/_esm5/internal/operators/publishReplay.js","../internal/operators/race":"node_modules/rxjs/_esm5/internal/operators/race.js","../internal/operators/reduce":"node_modules/rxjs/_esm5/internal/operators/reduce.js","../internal/operators/repeat":"node_modules/rxjs/_esm5/internal/operators/repeat.js","../internal/operators/repeatWhen":"node_modules/rxjs/_esm5/internal/operators/repeatWhen.js","../internal/operators/retry":"node_modules/rxjs/_esm5/internal/operators/retry.js","../internal/operators/retryWhen":"node_modules/rxjs/_esm5/internal/operators/retryWhen.js","../internal/operators/refCount":"node_modules/rxjs/_esm5/internal/operators/refCount.js","../internal/operators/sample":"node_modules/rxjs/_esm5/internal/operators/sample.js","../internal/operators/sampleTime":"node_modules/rxjs/_esm5/internal/operators/sampleTime.js","../internal/operators/scan":"node_modules/rxjs/_esm5/internal/operators/scan.js","../internal/operators/sequenceEqual":"node_modules/rxjs/_esm5/internal/operators/sequenceEqual.js","../internal/operators/share":"node_modules/rxjs/_esm5/internal/operators/share.js","../internal/operators/shareReplay":"node_modules/rxjs/_esm5/internal/operators/shareReplay.js","../internal/operators/single":"node_modules/rxjs/_esm5/internal/operators/single.js","../internal/operators/skip":"node_modules/rxjs/_esm5/internal/operators/skip.js","../internal/operators/skipLast":"node_modules/rxjs/_esm5/internal/operators/skipLast.js","../internal/operators/skipUntil":"node_modules/rxjs/_esm5/internal/operators/skipUntil.js","../internal/operators/skipWhile":"node_modules/rxjs/_esm5/internal/operators/skipWhile.js","../internal/operators/startWith":"node_modules/rxjs/_esm5/internal/operators/startWith.js","../internal/operators/subscribeOn":"node_modules/rxjs/_esm5/internal/operators/subscribeOn.js","../internal/operators/switchAll":"node_modules/rxjs/_esm5/internal/operators/switchAll.js","../internal/operators/switchMap":"node_modules/rxjs/_esm5/internal/operators/switchMap.js","../internal/operators/switchMapTo":"node_modules/rxjs/_esm5/internal/operators/switchMapTo.js","../internal/operators/take":"node_modules/rxjs/_esm5/internal/operators/take.js","../internal/operators/takeLast":"node_modules/rxjs/_esm5/internal/operators/takeLast.js","../internal/operators/takeUntil":"node_modules/rxjs/_esm5/internal/operators/takeUntil.js","../internal/operators/takeWhile":"node_modules/rxjs/_esm5/internal/operators/takeWhile.js","../internal/operators/tap":"node_modules/rxjs/_esm5/internal/operators/tap.js","../internal/operators/throttle":"node_modules/rxjs/_esm5/internal/operators/throttle.js","../internal/operators/throttleTime":"node_modules/rxjs/_esm5/internal/operators/throttleTime.js","../internal/operators/throwIfEmpty":"node_modules/rxjs/_esm5/internal/operators/throwIfEmpty.js","../internal/operators/timeInterval":"node_modules/rxjs/_esm5/internal/operators/timeInterval.js","../internal/operators/timeout":"node_modules/rxjs/_esm5/internal/operators/timeout.js","../internal/operators/timeoutWith":"node_modules/rxjs/_esm5/internal/operators/timeoutWith.js","../internal/operators/timestamp":"node_modules/rxjs/_esm5/internal/operators/timestamp.js","../internal/operators/toArray":"node_modules/rxjs/_esm5/internal/operators/toArray.js","../internal/operators/window":"node_modules/rxjs/_esm5/internal/operators/window.js","../internal/operators/windowCount":"node_modules/rxjs/_esm5/internal/operators/windowCount.js","../internal/operators/windowTime":"node_modules/rxjs/_esm5/internal/operators/windowTime.js","../internal/operators/windowToggle":"node_modules/rxjs/_esm5/internal/operators/windowToggle.js","../internal/operators/windowWhen":"node_modules/rxjs/_esm5/internal/operators/windowWhen.js","../internal/operators/withLatestFrom":"node_modules/rxjs/_esm5/internal/operators/withLatestFrom.js","../internal/operators/zip":"node_modules/rxjs/_esm5/internal/operators/zip.js","../internal/operators/zipAll":"node_modules/rxjs/_esm5/internal/operators/zipAll.js"}],"node_modules/rxjs/_esm5/internal/util/root.js":[function(require,module,exports) {
+var global = arguments[3];
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.root = void 0;
+
+/** PURE_IMPORTS_START  PURE_IMPORTS_END */
+var __window = typeof window !== 'undefined' && window;
+
+var __self = typeof self !== 'undefined' && typeof WorkerGlobalScope !== 'undefined' && self instanceof WorkerGlobalScope && self;
+
+var __global = typeof global !== 'undefined' && global;
+
+var _root = __window || __global || __self;
+/*@__PURE__*/
+
+
+exports.root = _root;
+
+(function () {
+  if (!_root) {
+    throw (
+      /*@__PURE__*/
+      new Error('RxJS could not find any global context (window, self, global)')
+    );
+  }
+})();
+},{}],"node_modules/rxjs/_esm5/internal/observable/dom/AjaxObservable.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.ajaxGet = ajaxGet;
+exports.ajaxPost = ajaxPost;
+exports.ajaxDelete = ajaxDelete;
+exports.ajaxPut = ajaxPut;
+exports.ajaxPatch = ajaxPatch;
+exports.ajaxGetJSON = ajaxGetJSON;
+exports.AjaxTimeoutError = exports.AjaxError = exports.AjaxResponse = exports.AjaxSubscriber = exports.AjaxObservable = void 0;
+
+var tslib_1 = _interopRequireWildcard(require("tslib"));
+
+var _root = require("../../util/root");
+
+var _Observable = require("../../Observable");
+
+var _Subscriber = require("../../Subscriber");
+
+var _map = require("../../operators/map");
+
+function _getRequireWildcardCache() { if (typeof WeakMap !== "function") return null; var cache = new WeakMap(); _getRequireWildcardCache = function () { return cache; }; return cache; }
+
+function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } var cache = _getRequireWildcardCache(); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; if (obj != null) { var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } } newObj.default = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
+
+/** PURE_IMPORTS_START tslib,_.._util_root,_.._Observable,_.._Subscriber,_.._operators_map PURE_IMPORTS_END */
+function getCORSRequest() {
+  if (_root.root.XMLHttpRequest) {
+    return new _root.root.XMLHttpRequest();
+  } else if (!!_root.root.XDomainRequest) {
+    return new _root.root.XDomainRequest();
+  } else {
+    throw new Error('CORS is not supported by your browser');
+  }
+}
+
+function getXMLHttpRequest() {
+  if (_root.root.XMLHttpRequest) {
+    return new _root.root.XMLHttpRequest();
+  } else {
+    var progId = void 0;
+
+    try {
+      var progIds = ['Msxml2.XMLHTTP', 'Microsoft.XMLHTTP', 'Msxml2.XMLHTTP.4.0'];
+
+      for (var i = 0; i < 3; i++) {
+        try {
+          progId = progIds[i];
+
+          if (new _root.root.ActiveXObject(progId)) {
+            break;
+          }
+        } catch (e) {}
+      }
+
+      return new _root.root.ActiveXObject(progId);
+    } catch (e) {
+      throw new Error('XMLHttpRequest is not supported by your browser');
+    }
+  }
+}
+
+function ajaxGet(url, headers) {
+  if (headers === void 0) {
+    headers = null;
+  }
+
+  return new AjaxObservable({
+    method: 'GET',
+    url: url,
+    headers: headers
+  });
+}
+
+function ajaxPost(url, body, headers) {
+  return new AjaxObservable({
+    method: 'POST',
+    url: url,
+    body: body,
+    headers: headers
+  });
+}
+
+function ajaxDelete(url, headers) {
+  return new AjaxObservable({
+    method: 'DELETE',
+    url: url,
+    headers: headers
+  });
+}
+
+function ajaxPut(url, body, headers) {
+  return new AjaxObservable({
+    method: 'PUT',
+    url: url,
+    body: body,
+    headers: headers
+  });
+}
+
+function ajaxPatch(url, body, headers) {
+  return new AjaxObservable({
+    method: 'PATCH',
+    url: url,
+    body: body,
+    headers: headers
+  });
+}
+
+var mapResponse =
+/*@__PURE__*/
+(0, _map.map)(function (x, index) {
+  return x.response;
+});
+
+function ajaxGetJSON(url, headers) {
+  return mapResponse(new AjaxObservable({
+    method: 'GET',
+    url: url,
+    responseType: 'json',
+    headers: headers
+  }));
+}
+
+var AjaxObservable =
+/*@__PURE__*/
+function (_super) {
+  tslib_1.__extends(AjaxObservable, _super);
+
+  function AjaxObservable(urlOrRequest) {
+    var _this = _super.call(this) || this;
+
+    var request = {
+      async: true,
+      createXHR: function () {
+        return this.crossDomain ? getCORSRequest() : getXMLHttpRequest();
+      },
+      crossDomain: true,
+      withCredentials: false,
+      headers: {},
+      method: 'GET',
+      responseType: 'json',
+      timeout: 0
+    };
+
+    if (typeof urlOrRequest === 'string') {
+      request.url = urlOrRequest;
+    } else {
+      for (var prop in urlOrRequest) {
+        if (urlOrRequest.hasOwnProperty(prop)) {
+          request[prop] = urlOrRequest[prop];
+        }
+      }
+    }
+
+    _this.request = request;
+    return _this;
+  }
+
+  AjaxObservable.prototype._subscribe = function (subscriber) {
+    return new AjaxSubscriber(subscriber, this.request);
+  };
+
+  AjaxObservable.create = function () {
+    var create = function (urlOrRequest) {
+      return new AjaxObservable(urlOrRequest);
+    };
+
+    create.get = ajaxGet;
+    create.post = ajaxPost;
+    create.delete = ajaxDelete;
+    create.put = ajaxPut;
+    create.patch = ajaxPatch;
+    create.getJSON = ajaxGetJSON;
+    return create;
+  }();
+
+  return AjaxObservable;
+}(_Observable.Observable);
+
+exports.AjaxObservable = AjaxObservable;
+
+var AjaxSubscriber =
+/*@__PURE__*/
+function (_super) {
+  tslib_1.__extends(AjaxSubscriber, _super);
+
+  function AjaxSubscriber(destination, request) {
+    var _this = _super.call(this, destination) || this;
+
+    _this.request = request;
+    _this.done = false;
+    var headers = request.headers = request.headers || {};
+
+    if (!request.crossDomain && !_this.getHeader(headers, 'X-Requested-With')) {
+      headers['X-Requested-With'] = 'XMLHttpRequest';
+    }
+
+    var contentTypeHeader = _this.getHeader(headers, 'Content-Type');
+
+    if (!contentTypeHeader && !(_root.root.FormData && request.body instanceof _root.root.FormData) && typeof request.body !== 'undefined') {
+      headers['Content-Type'] = 'application/x-www-form-urlencoded; charset=UTF-8';
+    }
+
+    request.body = _this.serializeBody(request.body, _this.getHeader(request.headers, 'Content-Type'));
+
+    _this.send();
+
+    return _this;
+  }
+
+  AjaxSubscriber.prototype.next = function (e) {
+    this.done = true;
+
+    var _a = this,
+        xhr = _a.xhr,
+        request = _a.request,
+        destination = _a.destination;
+
+    var result;
+
+    try {
+      result = new AjaxResponse(e, xhr, request);
+    } catch (err) {
+      return destination.error(err);
+    }
+
+    destination.next(result);
+  };
+
+  AjaxSubscriber.prototype.send = function () {
+    var _a = this,
+        request = _a.request,
+        _b = _a.request,
+        user = _b.user,
+        method = _b.method,
+        url = _b.url,
+        async = _b.async,
+        password = _b.password,
+        headers = _b.headers,
+        body = _b.body;
+
+    try {
+      var xhr = this.xhr = request.createXHR();
+      this.setupEvents(xhr, request);
+
+      if (user) {
+        xhr.open(method, url, async, user, password);
+      } else {
+        xhr.open(method, url, async);
+      }
+
+      if (async) {
+        xhr.timeout = request.timeout;
+        xhr.responseType = request.responseType;
+      }
+
+      if ('withCredentials' in xhr) {
+        xhr.withCredentials = !!request.withCredentials;
+      }
+
+      this.setHeaders(xhr, headers);
+
+      if (body) {
+        xhr.send(body);
+      } else {
+        xhr.send();
+      }
+    } catch (err) {
+      this.error(err);
+    }
+  };
+
+  AjaxSubscriber.prototype.serializeBody = function (body, contentType) {
+    if (!body || typeof body === 'string') {
+      return body;
+    } else if (_root.root.FormData && body instanceof _root.root.FormData) {
+      return body;
+    }
+
+    if (contentType) {
+      var splitIndex = contentType.indexOf(';');
+
+      if (splitIndex !== -1) {
+        contentType = contentType.substring(0, splitIndex);
+      }
+    }
+
+    switch (contentType) {
+      case 'application/x-www-form-urlencoded':
+        return Object.keys(body).map(function (key) {
+          return encodeURIComponent(key) + "=" + encodeURIComponent(body[key]);
+        }).join('&');
+
+      case 'application/json':
+        return JSON.stringify(body);
+
+      default:
+        return body;
+    }
+  };
+
+  AjaxSubscriber.prototype.setHeaders = function (xhr, headers) {
+    for (var key in headers) {
+      if (headers.hasOwnProperty(key)) {
+        xhr.setRequestHeader(key, headers[key]);
+      }
+    }
+  };
+
+  AjaxSubscriber.prototype.getHeader = function (headers, headerName) {
+    for (var key in headers) {
+      if (key.toLowerCase() === headerName.toLowerCase()) {
+        return headers[key];
+      }
+    }
+
+    return undefined;
+  };
+
+  AjaxSubscriber.prototype.setupEvents = function (xhr, request) {
+    var progressSubscriber = request.progressSubscriber;
+
+    function xhrTimeout(e) {
+      var _a = xhrTimeout,
+          subscriber = _a.subscriber,
+          progressSubscriber = _a.progressSubscriber,
+          request = _a.request;
+
+      if (progressSubscriber) {
+        progressSubscriber.error(e);
+      }
+
+      var error;
+
+      try {
+        error = new AjaxTimeoutError(this, request);
+      } catch (err) {
+        error = err;
+      }
+
+      subscriber.error(error);
+    }
+
+    xhr.ontimeout = xhrTimeout;
+    xhrTimeout.request = request;
+    xhrTimeout.subscriber = this;
+    xhrTimeout.progressSubscriber = progressSubscriber;
+
+    if (xhr.upload && 'withCredentials' in xhr) {
+      if (progressSubscriber) {
+        var xhrProgress_1;
+
+        xhrProgress_1 = function (e) {
+          var progressSubscriber = xhrProgress_1.progressSubscriber;
+          progressSubscriber.next(e);
+        };
+
+        if (_root.root.XDomainRequest) {
+          xhr.onprogress = xhrProgress_1;
+        } else {
+          xhr.upload.onprogress = xhrProgress_1;
+        }
+
+        xhrProgress_1.progressSubscriber = progressSubscriber;
+      }
+
+      var xhrError_1;
+
+      xhrError_1 = function (e) {
+        var _a = xhrError_1,
+            progressSubscriber = _a.progressSubscriber,
+            subscriber = _a.subscriber,
+            request = _a.request;
+
+        if (progressSubscriber) {
+          progressSubscriber.error(e);
+        }
+
+        var error;
+
+        try {
+          error = new AjaxError('ajax error', this, request);
+        } catch (err) {
+          error = err;
+        }
+
+        subscriber.error(error);
+      };
+
+      xhr.onerror = xhrError_1;
+      xhrError_1.request = request;
+      xhrError_1.subscriber = this;
+      xhrError_1.progressSubscriber = progressSubscriber;
+    }
+
+    function xhrReadyStateChange(e) {
+      return;
+    }
+
+    xhr.onreadystatechange = xhrReadyStateChange;
+    xhrReadyStateChange.subscriber = this;
+    xhrReadyStateChange.progressSubscriber = progressSubscriber;
+    xhrReadyStateChange.request = request;
+
+    function xhrLoad(e) {
+      var _a = xhrLoad,
+          subscriber = _a.subscriber,
+          progressSubscriber = _a.progressSubscriber,
+          request = _a.request;
+
+      if (this.readyState === 4) {
+        var status_1 = this.status === 1223 ? 204 : this.status;
+        var response = this.responseType === 'text' ? this.response || this.responseText : this.response;
+
+        if (status_1 === 0) {
+          status_1 = response ? 200 : 0;
+        }
+
+        if (status_1 < 400) {
+          if (progressSubscriber) {
+            progressSubscriber.complete();
+          }
+
+          subscriber.next(e);
+          subscriber.complete();
+        } else {
+          if (progressSubscriber) {
+            progressSubscriber.error(e);
+          }
+
+          var error = void 0;
+
+          try {
+            error = new AjaxError('ajax error ' + status_1, this, request);
+          } catch (err) {
+            error = err;
+          }
+
+          subscriber.error(error);
+        }
+      }
+    }
+
+    xhr.onload = xhrLoad;
+    xhrLoad.subscriber = this;
+    xhrLoad.progressSubscriber = progressSubscriber;
+    xhrLoad.request = request;
+  };
+
+  AjaxSubscriber.prototype.unsubscribe = function () {
+    var _a = this,
+        done = _a.done,
+        xhr = _a.xhr;
+
+    if (!done && xhr && xhr.readyState !== 4 && typeof xhr.abort === 'function') {
+      xhr.abort();
+    }
+
+    _super.prototype.unsubscribe.call(this);
+  };
+
+  return AjaxSubscriber;
+}(_Subscriber.Subscriber);
+
+exports.AjaxSubscriber = AjaxSubscriber;
+
+var AjaxResponse =
+/*@__PURE__*/
+function () {
+  function AjaxResponse(originalEvent, xhr, request) {
+    this.originalEvent = originalEvent;
+    this.xhr = xhr;
+    this.request = request;
+    this.status = xhr.status;
+    this.responseType = xhr.responseType || request.responseType;
+    this.response = parseXhrResponse(this.responseType, xhr);
+  }
+
+  return AjaxResponse;
+}();
+
+exports.AjaxResponse = AjaxResponse;
+
+var AjaxErrorImpl =
+/*@__PURE__*/
+function () {
+  function AjaxErrorImpl(message, xhr, request) {
+    Error.call(this);
+    this.message = message;
+    this.name = 'AjaxError';
+    this.xhr = xhr;
+    this.request = request;
+    this.status = xhr.status;
+    this.responseType = xhr.responseType || request.responseType;
+    this.response = parseXhrResponse(this.responseType, xhr);
+    return this;
+  }
+
+  AjaxErrorImpl.prototype =
+  /*@__PURE__*/
+  Object.create(Error.prototype);
+  return AjaxErrorImpl;
+}();
+
+var AjaxError = AjaxErrorImpl;
+exports.AjaxError = AjaxError;
+
+function parseJson(xhr) {
+  if ('response' in xhr) {
+    return xhr.responseType ? xhr.response : JSON.parse(xhr.response || xhr.responseText || 'null');
+  } else {
+    return JSON.parse(xhr.responseText || 'null');
+  }
+}
+
+function parseXhrResponse(responseType, xhr) {
+  switch (responseType) {
+    case 'json':
+      return parseJson(xhr);
+
+    case 'xml':
+      return xhr.responseXML;
+
+    case 'text':
+    default:
+      return 'response' in xhr ? xhr.response : xhr.responseText;
+  }
+}
+
+function AjaxTimeoutErrorImpl(xhr, request) {
+  AjaxError.call(this, 'ajax timeout', xhr, request);
+  this.name = 'AjaxTimeoutError';
+  return this;
+}
+
+var AjaxTimeoutError = AjaxTimeoutErrorImpl;
+exports.AjaxTimeoutError = AjaxTimeoutError;
+},{"tslib":"node_modules/tslib/tslib.es6.js","../../util/root":"node_modules/rxjs/_esm5/internal/util/root.js","../../Observable":"node_modules/rxjs/_esm5/internal/Observable.js","../../Subscriber":"node_modules/rxjs/_esm5/internal/Subscriber.js","../../operators/map":"node_modules/rxjs/_esm5/internal/operators/map.js"}],"node_modules/rxjs/_esm5/internal/observable/dom/ajax.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.ajax = void 0;
+
+var _AjaxObservable = require("./AjaxObservable");
+
+/** PURE_IMPORTS_START _AjaxObservable PURE_IMPORTS_END */
+var ajax =
+/*@__PURE__*/
+function () {
+  return _AjaxObservable.AjaxObservable.create;
+}();
+
+exports.ajax = ajax;
+},{"./AjaxObservable":"node_modules/rxjs/_esm5/internal/observable/dom/AjaxObservable.js"}],"node_modules/rxjs/_esm5/ajax/index.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+Object.defineProperty(exports, "ajax", {
+  enumerable: true,
+  get: function () {
+    return _ajax.ajax;
+  }
+});
+Object.defineProperty(exports, "AjaxResponse", {
+  enumerable: true,
+  get: function () {
+    return _AjaxObservable.AjaxResponse;
+  }
+});
+Object.defineProperty(exports, "AjaxError", {
+  enumerable: true,
+  get: function () {
+    return _AjaxObservable.AjaxError;
+  }
+});
+Object.defineProperty(exports, "AjaxTimeoutError", {
+  enumerable: true,
+  get: function () {
+    return _AjaxObservable.AjaxTimeoutError;
+  }
+});
+
+var _ajax = require("../internal/observable/dom/ajax");
+
+var _AjaxObservable = require("../internal/observable/dom/AjaxObservable");
+},{"../internal/observable/dom/ajax":"node_modules/rxjs/_esm5/internal/observable/dom/ajax.js","../internal/observable/dom/AjaxObservable":"node_modules/rxjs/_esm5/internal/observable/dom/AjaxObservable.js"}],"js/createStore.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -15261,18 +15884,23 @@ var _rxjs = require("rxjs");
 var _operators = require("rxjs/operators");
 
 var createStore = function createStore(reducer) {
-  // Subject is our hot observable.
-  var action$ = new _rxjs.Subject();
+  // Subject is the action stream observable.
+  // Stream of Actions being emmitted which is the result of a subject
+  var action$ = new _rxjs.Subject(); // store$ is the result of working with the current state and the action
+
   var store$ = action$.pipe( // Initiate our reducer with calling INI action
   (0, _operators.startWith)({
     type: '__INIT__'
   }), // You can create Redux-like state management with scan!
   // Scan is a reducer over time.
   // State -> Action -> New State
-  (0, _operators.scan)(reducer, undefined), //Any late subscribers will have access to the last state
+  // Scan computes the current state
+  // scan initializes the reducer with undefined which will load the INITIAL_STATE
+  (0, _operators.scan)(reducer, undefined), // This is application wide state
+  // With shareReplay, Any late or new subscribers will have access to the last version of the state
   (0, _operators.shareReplay)(1)); // add the action stream to the store
 
-  store$.action$ = action$;
+  store$.action$ = action$; // Dispatches actions onto the stream
 
   store$.dispatch = function (action) {
     return action$.next(action);
@@ -15298,8 +15926,11 @@ function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { va
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
 var initialState = {
-  count: 0
-};
+  count: 0,
+  results_count: 0,
+  results: []
+}; // Dictionary of ACTIONS gives us a functional decalaritive style of calling actions
+
 var handlers = {
   INCREMENT: function INCREMENT(state) {
     return _objectSpread({}, state, {
@@ -15316,6 +15947,16 @@ var handlers = {
       count: state.count + action.payload
     });
   },
+  RESULTS: function RESULTS(state, action) {
+    return _objectSpread({}, state, {
+      results: action.payload
+    });
+  },
+  RESULTS_COUNT: function RESULTS_COUNT(state, action) {
+    return _objectSpread({}, state, {
+      results_count: action.payload
+    });
+  },
   DEFAULT: function DEFAULT(state) {
     return state;
   }
@@ -15324,7 +15965,9 @@ var handlers = {
 var reducer = function reducer() {
   var state = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : initialState;
   var action = arguments.length > 1 ? arguments[1] : undefined;
-  var handler = handlers[action.type] || handlers.DEFAULT;
+  // Look up the handler
+  var handler = handlers[action.type] || handlers.DEFAULT; // Execute, and return new state
+
   return handler(state, action);
 };
 
@@ -15337,21 +15980,25 @@ var _rxjs = require("rxjs");
 
 var _operators = require("rxjs/operators");
 
+var _ajax = require("rxjs/ajax");
+
 var _createStore = _interopRequireDefault(require("./createStore"));
 
 var _reducer = _interopRequireDefault(require("./reducer"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
+var github_url = "https://api.github.com/search/users?q=";
 var store$ = (0, _createStore.default)(_reducer.default);
 store$.subscribe(function (state) {
-  return result.textContent = JSON.stringify(state, null, 2);
+  return console.log(state) || (result.textContent = JSON.stringify(state, null, 2));
 });
 (0, _rxjs.fromEvent)(document.getElementById('increment'), 'click').pipe((0, _operators.map)(function () {
   return {
     type: 'INCREMENT'
   };
-})).subscribe(store$.action$);
+})) // pushing -> {type: "INCREMENT"}
+.subscribe(store$.action$);
 (0, _rxjs.fromEvent)(document.getElementById('plus5'), 'click').pipe((0, _operators.map)(function () {
   return {
     type: 'ADD',
@@ -15363,7 +16010,39 @@ store$.subscribe(function (state) {
     type: 'DECREMENT'
   };
 })).subscribe(store$.action$);
-},{"rxjs":"node_modules/rxjs/_esm5/index.js","rxjs/operators":"node_modules/rxjs/_esm5/operators/index.js","./createStore":"js/createStore.js","./reducer":"js/reducer.js"}],"node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+var searchInput$ = (0, _rxjs.fromEvent)(document.getElementById("search"), "input").pipe((0, _operators.map)(function (e) {
+  return e.target.value;
+}), (0, _operators.debounceTime)(1000), // runs after 1 second of idle time
+(0, _operators.distinctUntilChanged)(), // makes sure there is a change in the request value
+(0, _operators.tap)(function () {
+  return result.textContent = "";
+}), (0, _operators.filter)(function (query) {
+  return !!query;
+}), // not empty search
+(0, _operators.switchMap)(function (query) {
+  return _ajax.ajax.getJSON("".concat(github_url).concat(query)).pipe((0, _operators.catchError)(function (err) {
+    return _rxjs.EMPTY;
+  }));
+}), (0, _operators.share)() // if subscription is shared, network requests will only be made once.
+); // Subscribe to searchInput$ stream.
+
+searchInput$.pipe((0, _operators.map)(function (rsp) {
+  return rsp.total_count;
+}), (0, _operators.map)(function (count) {
+  return {
+    type: 'RESULTS_COUNT',
+    payload: count
+  };
+})).subscribe(store$.action$);
+searchInput$.pipe((0, _operators.map)(function (rsp) {
+  return rsp.items;
+}), (0, _operators.map)(function (users) {
+  return {
+    type: 'RESULTS',
+    payload: users
+  };
+})).subscribe(store$.action$);
+},{"rxjs":"node_modules/rxjs/_esm5/index.js","rxjs/operators":"node_modules/rxjs/_esm5/operators/index.js","rxjs/ajax":"node_modules/rxjs/_esm5/ajax/index.js","./createStore":"js/createStore.js","./reducer":"js/reducer.js"}],"node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -15391,7 +16070,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "65052" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "50941" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
