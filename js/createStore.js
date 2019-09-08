@@ -1,28 +1,23 @@
 import { Subject } from 'rxjs';
 import { scan, startWith, shareReplay } from 'rxjs/operators';
 
-const initialState = {
-  count: 0
-};
-
 const createStore = reducer => {
+
+  // Subject is our hot observable.
   const action$ = new Subject();
 
   const store$ = action$.pipe(
+    // Initiate our reducer with calling INI action
     startWith({ type: '__INIT__' }),
-    scan((state = initialState, action) => {
-      const handlers = {
-        INCREMENT: state => ({ ...state, count: state.count + 1 }),
-        DECREMENT: state => ({ ...state, count: state.count - 1 }),
-        ADD: (state, action) => ({ ...state, count: state.count + action.payload }),
-        DEFAULT: state => state
-      };
-      const handler = handlers[action.type] || handlers.DEFAULT;
-      return handler(state, action);
-    }, undefined),
+    // You can create Redux-like state management with scan!
+    // Scan is a reducer over time.
+    // State -> Action -> New State
+    scan(reducer, undefined),
+    //Any late subscribers will have access to the last state
     shareReplay(1)
   );
 
+  // add the action stream to the store
   store$.action$ = action$;
   store$.dispatch = action => action$.next(action);
 
