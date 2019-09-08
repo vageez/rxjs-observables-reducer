@@ -15260,46 +15260,18 @@ var _rxjs = require("rxjs");
 
 var _operators = require("rxjs/operators");
 
-function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); keys.push.apply(keys, symbols); } return keys; }
-
-function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(source, true).forEach(function (key) { _defineProperty(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(source).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
-
-function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
-
-var initialState = {
-  count: 0
-};
-
 var createStore = function createStore(reducer) {
+  // Subject is our hot observable.
   var action$ = new _rxjs.Subject();
-  var store$ = action$.pipe((0, _operators.startWith)({
+  var store$ = action$.pipe( // Initiate our reducer with calling INI action
+  (0, _operators.startWith)({
     type: '__INIT__'
-  }), (0, _operators.scan)(function () {
-    var state = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : initialState;
-    var action = arguments.length > 1 ? arguments[1] : undefined;
-    var handlers = {
-      INCREMENT: function INCREMENT(state) {
-        return _objectSpread({}, state, {
-          count: state.count + 1
-        });
-      },
-      DECREMENT: function DECREMENT(state) {
-        return _objectSpread({}, state, {
-          count: state.count - 1
-        });
-      },
-      ADD: function ADD(state, action) {
-        return _objectSpread({}, state, {
-          count: state.count + action.payload
-        });
-      },
-      DEFAULT: function DEFAULT(state) {
-        return state;
-      }
-    };
-    var handler = handlers[action.type] || handlers.DEFAULT;
-    return handler(state, action);
-  }, undefined), (0, _operators.shareReplay)(1));
+  }), // You can create Redux-like state management with scan!
+  // Scan is a reducer over time.
+  // State -> Action -> New State
+  (0, _operators.scan)(reducer, undefined), //Any late subscribers will have access to the last state
+  (0, _operators.shareReplay)(1)); // add the action stream to the store
+
   store$.action$ = action$;
 
   store$.dispatch = function (action) {
@@ -15327,37 +15299,31 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 
 var initialState = {
   count: 0
-}; // const handlers = {
-//   INCREMENT: state => ({ ...state, count: state.count + 1 }),
-//   DECREMENT: state => ({ ...state, count: state.count - 1 }),
-//   ADD: (state, action) => ({ ...state, count: state.count + action.payload }),
-//   DEFAULT: state => state
-// };
-// New State = Old State + Action
+};
+var handlers = {
+  INCREMENT: function INCREMENT(state) {
+    return _objectSpread({}, state, {
+      count: state.count + 1
+    });
+  },
+  DECREMENT: function DECREMENT(state) {
+    return _objectSpread({}, state, {
+      count: state.count - 1
+    });
+  },
+  ADD: function ADD(state, action) {
+    return _objectSpread({}, state, {
+      count: state.count + action.payload
+    });
+  },
+  DEFAULT: function DEFAULT(state) {
+    return state;
+  }
+}; // New State = Old State + Action
 
 var reducer = function reducer() {
   var state = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : initialState;
   var action = arguments.length > 1 ? arguments[1] : undefined;
-  var handlers = {
-    INCREMENT: function INCREMENT(state) {
-      return _objectSpread({}, state, {
-        count: state.count + 1
-      });
-    },
-    DECREMENT: function DECREMENT(state) {
-      return _objectSpread({}, state, {
-        count: state.count - 1
-      });
-    },
-    ADD: function ADD(state, action) {
-      return _objectSpread({}, state, {
-        count: state.count + action.payload
-      });
-    },
-    DEFAULT: function DEFAULT(state) {
-      return state;
-    }
-  };
   var handler = handlers[action.type] || handlers.DEFAULT;
   return handler(state, action);
 };
@@ -15425,7 +15391,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "49779" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "65052" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
